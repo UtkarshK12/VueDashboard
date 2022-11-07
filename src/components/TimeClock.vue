@@ -38,10 +38,18 @@ await fetch('https://jsonplaceholder.typicode.com/todos/1')
   });
 
 // a.value = await response.json()["hour"];
-const b= ref(23);
+const b= ref();
+
+await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    b.value = data['id']; // this will be a string
+  });
+
 </script>
 
-<style>
+<style scoped>
 
 .clock{
   align-items: center;
@@ -49,7 +57,7 @@ const b= ref(23);
   display: flex;
   height: 200px;
   box-sizing: border-box;
-  background-color: aquamarine;
+  background-color: lightblue;
   flex-direction: column;
   justify-content: space-between;
   
@@ -63,13 +71,15 @@ const b= ref(23);
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    font-family: sans-serif;
+    font-size: small;
 }
-h1 {
+.Number h1 {
   font-weight: normal;
   letter-spacing: .125rem;
   text-transform: uppercase;
 }
-h4 {
+.Desc h4 {
   font-weight: normal;
   letter-spacing: .125rem;
   text-transform: uppercase;
