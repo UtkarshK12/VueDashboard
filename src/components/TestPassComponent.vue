@@ -1,47 +1,60 @@
 <template>
 <div class="TestPass">
-<h3> Passed Tests </h3>
-<div class="pie animate" style="--p:{{b}};--c:lightgreen"> 90%</div>
-
+<h2> Passed Tests </h2>
+<div class="pie" style="--c:darkcyan;--b:15px"> {{b}}%</div>
+<br>
 
 </div>
 </template>
 
-<script >
+<script setup>
     
   import {ref} from 'vue';
-const a = ref();
 
-await fetch('https://jsonplaceholder.typicode.com/todos/1')
+ let b=ref(); 
+  await fetch('https://jsonplaceholder.typicode.com/todos')
   .then(function(response) {
     return response.json();
   }).then(function(data) {
-    a.value = data['id']; // this will be a string
+    b.value = data[89]['id']; // this will be a string
   });
-
- const b=ref(100); 
-  // await fetch('https://jsonplaceholder.typicode.com/todos/1')
-  // .then(function(response) {
-  //   return response.json();
-  // }).then(function(data) {
-  //   b.value = data['id']; // this will be a string
-  // });
 
 </script>
 
 <style scoped>
 
+.TestPass{
+  align-items: center;
+  width: 350px;
+  display: flex;
+  height: 300px;
+  box-sizing: border-box;
+  background-color: lightblue;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  font-family: sans-serif;
+
+}
+
+.TestPass h3{
+  align-items: center;
+}
+/* 
+:root{
+  --b: 100;
+} */
 
 @property --p{
   syntax: '<number>';
-  inherits: false;
-  initial-value: v-bind("b");
+  inherits: true;
+  initial-value: v-bind(b);
 }
 
 .pie {
-  --p:80;
+  --p:v-bind('b');
   --b:22px;
-  --c:darkred;
+  --c:darkcyan;
   --w:150px;
 
   width: var(--w);

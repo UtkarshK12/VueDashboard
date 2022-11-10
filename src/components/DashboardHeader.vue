@@ -1,19 +1,28 @@
 <template>
-    <div id="Dash">       
-        <h1>Dashboard</h1>    
-    </div>
+    <div class="Dash">
     
+        <div><br></div>
+        <div><h1>DASHBOARD</h1>  </div>        
+        <div><br></div>
+    </div>
 </template>
 
 <style scoped>
 
 
-    #Dash{
-        height: 50px;
-        background-color: grey;
+    .Dash{
+        align-items:center;
+        height: 100px;
+        width:100%;
+        background-color: darkcyan;
+        display: flex;
+       flex-direction: column;
+       border-radius: 10px;
     }
-    #Dash h1{
-        color: aquamarine;
+    h1{
+        color: white;
+        font-family:sans-serif;
+
     }
     
 </style>
