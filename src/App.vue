@@ -5,6 +5,7 @@ import StatDashboard from './components/TestPassComponent.vue'
 import Dashboardheader from './components/DashboardHeader.vue'
 import TestPassComponent from './components/TestPassComponent.vue';
 import LogsStatsVue from './components/LogsStats.vue';
+import ErrorLogHeaderVue from './components/ErrorLogHeader.vue';
 const b= computed(()=>{
 })
 
@@ -17,6 +18,8 @@ const b= computed(()=>{
 <Suspense><TestPassComponent></TestPassComponent></Suspense><br>
 <Suspense><LogsStatsVue></LogsStatsVue></Suspense>
 </div>
+<br>
+<Suspense><ErrorLogHeaderVue></ErrorLogHeaderVue></Suspense>
 </div>
 </template>
 
@@ -24,7 +27,7 @@ const b= computed(()=>{
 .MainPage{
     width:auto;
     flex-direction: row;
-    background-color:  white;
+    background-color:  whitesmoke;
 ;
     align-items:stretch
 ;
@@ -36,9 +39,6 @@ const b= computed(()=>{
     flex-direction: row;
     gap: 20px
 }
-
-
-
 </style>
 
 

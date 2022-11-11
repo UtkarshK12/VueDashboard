@@ -60,6 +60,10 @@ await fetch('https://jsonplaceholder.typicode.com/todos')
   gap: 20px;
   
 }
+
+.clock .text h2{
+  color: darkcyan;
+}
 .column{
     display: flex;
     flex-direction: column;

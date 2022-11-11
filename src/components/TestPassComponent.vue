@@ -37,8 +37,9 @@
 
 }
 
-.TestPass h3{
+.TestPass h2{
   align-items: center;
+  color: darkcyan;
 }
 /* 
 :root{
