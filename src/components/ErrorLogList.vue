@@ -12,6 +12,7 @@
         <div v-for="bees in b">
         
             <div class="errorListBox">
+               
                 <div class="space0">
                 </div>
                 <div class="noOfErrors">
@@ -21,7 +22,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h3>{{bees['completed']}} </h3>    
+                    <h3><router-link to="/errorLog/">Error Name</router-link> </h3>    
                 </div>
                 <div class="space2">
                 </div>
@@ -43,6 +44,7 @@
 </template>
 <script setup>
 import {ref} from 'vue';
+import LogsStats from './LogsStats.vue';
 
 let searchText=ref();
 

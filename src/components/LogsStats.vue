@@ -109,7 +109,7 @@
     width: 90%;
     align-items:center;
     font-family: sans-serif;
-    font-style: italic;
+    
 }
 
 .text{
