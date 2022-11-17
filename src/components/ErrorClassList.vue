@@ -22,7 +22,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h3><router-link to="/errorLog/">Error Name</router-link> </h3>    
+                    <h3><router-link to="/classErrorList/">Error Name</router-link> </h3>    
                 </div>
                 <div class="space2">
                 </div>
@@ -57,7 +57,7 @@ let b=ref();
   });
 
 </script>
-<style>
+<style scoped>
     h2{
         
         color: white;
@@ -71,25 +71,27 @@ let b=ref();
         border-radius: 30px;
     }
     .errorListBox{
+        font-family: sans-serif;
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
         background-color: lightblue;
         border-radius: 30px;
         align-items: center;
+        font-size: small;
     }
     .space0{
-        width: 100px;
+        width: 5%;
     }
     .space1{
-        width: 60px;
+        width: 10%;
     }
 
     .space2{
-        width: 800px;
+        width: 55%;
     }
     .space3{
-        width: 150px;
+        width: 7%;
     }
 
     .noOfErrors{

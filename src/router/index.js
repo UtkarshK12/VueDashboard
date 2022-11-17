@@ -8,10 +8,17 @@ const routes = [
     },
 
     {
+        path:'/classErrorList/',
+        name:"classErrorList",
+        component:()=>import('../components/ClassErrorPage.vue')
+    },
+
+    {
         path:'/errorLog/',
         name:"errorLog",
-        component:()=>import('../components/ClassErrorList.vue')
+        component:()=>import('../components/ErrorDetailPage.vue')
     },
+   
    
 ]
 

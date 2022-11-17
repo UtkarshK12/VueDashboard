@@ -9,7 +9,7 @@ import StatDashboard from './TestPassComponent.vue'
 import Dashboardheader from './DashboardHeader.vue'
 import TestPassComponent from './TestPassComponent.vue';
 import LogsStatsVue from './LogsStats.vue';
-import ErrorLogList from './ErrorLogList.vue';
+import ErrorClassList from './ErrorClassList.vue';
 const b= computed(()=>{
 })
 
@@ -26,11 +26,11 @@ const b= computed(()=>{
 <Suspense><LogsStatsVue></LogsStatsVue></Suspense>
 </div>
 <br>
-<Suspense><ErrorLogList></ErrorLogList></Suspense>
+<Suspense><ErrorClassList></ErrorClassList></Suspense>
 </div>
 </template>
 
-<style>
+<style scoped>
 .MainPage{
     width:auto;
     flex-direction: row;
