@@ -22,7 +22,7 @@
               </div>
 
                 <div class="errorClass">
-                    <h3><router-link to="/classErrorList/">Error Name</router-link> </h3>    
+                    <h3><router-link to="/classErrorList/">Error Class Name</router-link> </h3>    
                 </div>
                 <div class="space2">
                 </div>
